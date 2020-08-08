@@ -1,0 +1,59 @@
+.pie-container {
+    position: static !important;
+    width: 66.6% !important;
+    height: 33.3% !important;
+    margin-left: calc(-33% / 2);
+    margin-right: -10%;
+}
+
+.diagram {
+    display: flex;
+    align-items: center;
+}
+
+.legend {
+    width: 66.6%;
+    z-index: 2;
+}
+
+@media (max-width: 720px) {
+    .diagram {
+        flex-direction: column;
+    }
+
+    .legend {
+        margin-top: 25px;
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+        border: 1px solid black;
+    }
+
+    .pie-container {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        height: 50% !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .legend {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 455px) {
+    .legend > tbody {
+        width: 455px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .legend {
+        overflow-x: scroll;
+        display: block;
+    }
+}
